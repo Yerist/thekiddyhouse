@@ -447,6 +447,12 @@ img { max-width: 100%; display: block; }
   width: 100%; height: 100%;
   pointer-events: none;
   overflow: hidden;
+  z-index: 0;
+}
+/* Todo el contenido del horario va encima del SVG */
+.schedule > *:not(.schedule-bg-svg) {
+  position: relative;
+  z-index: 1;
 }
 
 /* Sol: arco de izquierda a derecha */
@@ -471,80 +477,23 @@ img { max-width: 100%; display: block; }
   to   { transform: rotate(360deg); }
 }
 
-/* Nubes — cada una con su Y fijo para no caer al origen */
-.svg-cloud-1 { animation: svgCloud1 26s linear infinite; }
-.svg-cloud-2 { animation: svgCloud2 34s linear infinite; animation-delay: -14s; }
-.svg-cloud-3 { animation: svgCloud3 44s linear infinite; animation-delay: -22s; }
+/* Nubes — animation-fill-mode:both para evitar flash en origen */
+.svg-cloud-1 { animation: svgCloud1 45s linear infinite; animation-fill-mode: both; }
+.svg-cloud-2 { animation: svgCloud2 60s linear infinite; animation-fill-mode: both; animation-delay: -25s; }
+.svg-cloud-3 { animation: svgCloud3 75s linear infinite; animation-fill-mode: both; animation-delay: -40s; }
 @keyframes svgCloud1 {
-  from { transform: translate(-140px, 55px); }
-  to   { transform: translate(1580px,  55px); }
+  from { transform: translate(-240px, 155px); }
+  to   { transform: translate(1680px,  155px); }
 }
 @keyframes svgCloud2 {
-  from { transform: translate(-160px, 120px); }
-  to   { transform: translate(1600px,  120px); }
+  from { transform: translate(-240px, 185px); }
+  to   { transform: translate(1680px,  185px); }
 }
 @keyframes svgCloud3 {
-  from { transform: translate(-130px, 35px); }
-  to   { transform: translate(1570px,  35px); }
+  from { transform: translate(-240px, 130px); }
+  to   { transform: translate(1680px,  130px); }
 }
 
-/* Abejas */
-.svg-bee-1 {
-  animation: svgBee1 14s ease-in-out infinite;
-  transform: translate(180px, 100px);
-}
-.svg-bee-2 {
-  animation: svgBee2 18s ease-in-out infinite;
-  transform: translate(1100px, 140px);
-  animation-delay: -7s;
-}
-@keyframes svgBee1 {
-  0%   { transform: translate(180px, 100px) rotate(0deg) scaleX(1); }
-  30%  { transform: translate(340px, 60px) rotate(10deg) scaleX(1); }
-  50%  { transform: translate(480px, 120px) rotate(0deg) scaleX(-1); }
-  80%  { transform: translate(280px, 80px) rotate(-8deg) scaleX(-1); }
-  100% { transform: translate(180px, 100px) rotate(0deg) scaleX(1); }
-}
-@keyframes svgBee2 {
-  0%   { transform: translate(1100px, 140px) rotate(0deg) scaleX(1); }
-  25%  { transform: translate(1000px, 90px) rotate(8deg) scaleX(1); }
-  55%  { transform: translate(860px, 160px) rotate(-5deg) scaleX(-1); }
-  80%  { transform: translate(980px, 110px) rotate(5deg) scaleX(-1); }
-  100% { transform: translate(1100px, 140px) rotate(0deg) scaleX(1); }
-}
-/* Aleteo de alas en las abejas del SVG */
-.svg-bee-1 ellipse, .svg-bee-2 ellipse:nth-child(-n+2) {
-  animation: svgWingFlap 0.18s ease-in-out infinite alternate;
-  transform-origin: center;
-}
-
-/* Objetos flotantes */
-.svg-book-1  { animation: svgFloat1 7s ease-in-out infinite; }
-.svg-book-2  { animation: svgFloat2 9s ease-in-out infinite; }
-.svg-pencil-1 { animation: svgFloat3 6s ease-in-out infinite; }
-.svg-pencil-2 { animation: svgFloat4 8s ease-in-out infinite; }
-
-@keyframes svgFloat1 {
-  0%,100% { transform: translate(100px, 220px) rotate(-5deg); }
-  50%     { transform: translate(100px, 200px) rotate(5deg); }
-}
-@keyframes svgFloat2 {
-  0%,100% { transform: translate(1280px, 200px) rotate(4deg); }
-  50%     { transform: translate(1280px, 218px) rotate(-4deg); }
-}
-@keyframes svgFloat3 {
-  0%,100% { transform: translate(240px, 230px) rotate(-8deg); }
-  50%     { transform: translate(240px, 212px) rotate(8deg); }
-}
-@keyframes svgFloat4 {
-  0%,100% { transform: translate(1180px, 210px) rotate(6deg); }
-  50%     { transform: translate(1180px, 228px) rotate(-6deg); }
-}
-
-@keyframes svgWingFlap {
-  from { transform: scaleY(1); }
-  to   { transform: scaleY(0.3); }
-}
 
 .schedule-sun { display: none; }
 .sched-title {
