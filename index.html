@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Kiddy House</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Cursor abeja -->
+  <div id="bee-cursor">
+    <svg id="bee-svg" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" width="60" height="60">
+      <!-- Alas -->
+      <ellipse class="wing left-wing" cx="14" cy="22" rx="12" ry="7" fill="rgba(200,230,255,0.75)" stroke="#aad0f5" stroke-width="1"/>
+      <ellipse class="wing right-wing" cx="46" cy="22" rx="12" ry="7" fill="rgba(200,230,255,0.75)" stroke="#aad0f5" stroke-width="1"/>
+      <!-- Cuerpo -->
+      <ellipse cx="30" cy="34" rx="11" ry="15" fill="#FFD93D"/>
+      <!-- Rayas -->
+      <rect x="20" y="31" width="20" height="4" rx="2" fill="#2a2a2a" opacity="0.7"/>
+      <rect x="20" y="38" width="20" height="4" rx="2" fill="#2a2a2a" opacity="0.7"/>
+      <!-- Cabeza -->
+      <circle cx="30" cy="19" r="8" fill="#FFD93D"/>
+      <!-- Ojitos -->
+      <circle cx="27" cy="18" r="2" fill="#2a2a2a"/>
+      <circle cx="33" cy="18" r="2" fill="#2a2a2a"/>
+      <circle cx="27.7" cy="17.3" r="0.7" fill="white"/>
+      <circle cx="33.7" cy="17.3" r="0.7" fill="white"/>
+      <!-- Sonrisa -->
+      <path d="M27 21 Q30 24 33 21" stroke="#2a2a2a" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+      <!-- Antenas -->
+      <line x1="27" y1="12" x2="23" y2="6" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="23" cy="5.5" r="2" fill="#FF6B9D"/>
+      <line x1="33" y1="12" x2="37" y2="6" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="37" cy="5.5" r="2" fill="#FF6B9D"/>
+      <!-- Aguijón -->
+      <polygon points="30,49 27,54 33,54" fill="#FF7F2A"/>
+    </svg>
+  </div>
+
+  <!-- Navegación -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="logo">
+        <span class="logo-1">The </span><span class="logo-2">Kiddy House</span>
+        <span class="bee-logo">🐝</span>
+      </div>
+      <div class="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <a href="#contacto" class="nav-cta btn-primary">¡Inscríbete Ahora!</a>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#horarios">Horarios</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#contacto" class="btn-primary">¡Inscríbete Ahora!</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="inicio" class="hero">
+    <div class="hero-sun"></div>
+    <div class="cloud" style="left:-20px;top:50px;width:200px;height:72px;"></div>
+    <div class="cloud" style="left:190px;top:18px;width:150px;height:58px;"></div>
+    <div class="cloud" style="right:80px;top:28px;width:190px;height:68px;"></div>
+    <div class="cloud" style="right:-10px;top:90px;width:130px;height:52px;"></div>
+
+    <!-- Avatar abeja educativa -->
+    <div class="bee-avatar" id="bee-avatar">
+      <svg viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" width="120" height="160">
+        <!-- Gorro de graduación -->
+        <rect x="28" y="18" width="64" height="12" rx="4" fill="#2a2a2a"/>
+        <polygon points="60,2 28,18 92,18" fill="#2a2a2a"/>
+        <line x1="85" y1="18" x2="95" y2="30" stroke="#FFD93D" stroke-width="2"/>
+        <circle cx="97" cy="32" r="4" fill="#FFD93D"/>
+        <!-- Alas -->
+        <ellipse class="wing-avatar left-wing" cx="18" cy="72" rx="20" ry="13" fill="rgba(200,230,255,0.8)" stroke="#aad0f5" stroke-width="1.5"/>
+        <ellipse class="wing-avatar right-wing" cx="102" cy="72" rx="20" ry="13" fill="rgba(200,230,255,0.8)" stroke="#aad0f5" stroke-width="1.5"/>
+        <!-- Cuerpo -->
+        <ellipse cx="60" cy="100" rx="30" ry="40" fill="#FFD93D"/>
+        <!-- Rayas del cuerpo -->
+        <rect x="32" y="90" width="56" height="10" rx="5" fill="#2a2a2a" opacity="0.7"/>
+        <rect x="32" y="106" width="56" height="10" rx="5" fill="#2a2a2a" opacity="0.7"/>
+        <!-- Cabeza -->
+        <circle cx="60" cy="56" r="22" fill="#FFD93D"/>
+        <!-- Ojitos grandes -->
+        <circle cx="52" cy="54" r="7" fill="white"/>
+        <circle cx="68" cy="54" r="7" fill="white"/>
+        <circle cx="53" cy="55" r="4" fill="#2a2a2a"/>
+        <circle cx="69" cy="55" r="4" fill="#2a2a2a"/>
+        <circle cx="54" cy="53" r="1.5" fill="white"/>
+        <circle cx="70" cy="53" r="1.5" fill="white"/>
+        <!-- Sonrisa -->
+        <path d="M50 64 Q60 72 70 64" stroke="#2a2a2a" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <!-- Patas -->
+        <line x1="35" y1="128" x2="22" y2="148" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"/>
+        <line x1="85" y1="128" x2="98" y2="148" stroke="#2a2a2a" stroke-width="3" stroke-linecap="round"/>
+        <!-- Libro -->
+        <rect x="36" y="118" width="48" height="30" rx="4" fill="#4DAADC"/>
+        <rect x="36" y="118" width="24" height="30" rx="4" fill="#2A7FAA"/>
+        <line x1="60" y1="118" x2="60" y2="148" stroke="white" stroke-width="1.5"/>
+        <!-- Líneas del libro -->
+        <line x1="40" y1="128" x2="56" y2="128" stroke="white" stroke-width="1.5" opacity="0.6"/>
+        <line x1="40" y1="133" x2="56" y2="133" stroke="white" stroke-width="1.5" opacity="0.6"/>
+        <line x1="40" y1="138" x2="56" y2="138" stroke="white" stroke-width="1.5" opacity="0.6"/>
+        <line x1="64" y1="128" x2="80" y2="128" stroke="white" stroke-width="1.5" opacity="0.6"/>
+        <line x1="64" y1="133" x2="80" y2="133" stroke="white" stroke-width="1.5" opacity="0.6"/>
+        <line x1="64" y1="138" x2="80" y2="138" stroke="white" stroke-width="1.5" opacity="0.6"/>
+        <!-- Estrella -->
+        <text x="88" y="110" font-size="18" fill="#FF6B9D">★</text>
+      </svg>
+      <div class="speech-bubble">¡Hola! Bienvenido a<br><strong>The Kiddy House</strong> 🎓</div>
+    </div>
+
+    <div class="hero-content" data-aos="fade-up">
+      <h1>¡Bienvenidos a<br>The Kiddy House!</h1>
+      <p>El lugar donde aprender es una aventura.<br>Sala de tareas y centro de estudio para niños de 5 a 10 años.</p>
+      <div class="hero-btns">
+        <a href="#servicios" class="btn-primary">Conoce Nuestros Servicios</a>
+        <button class="btn-ghost" onclick="openModal()">¿Cómo Inscribirse?</button>
+      </div>
+    </div>
+    <!-- Abejas voladoras SVG -->
+    <div class="hero-bee hero-bee-1">
+      <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+        <ellipse class="bee-wing" cx="8" cy="13" rx="9" ry="5" fill="rgba(210,238,255,0.8)" stroke="#aad" stroke-width="0.8"/>
+        <ellipse class="bee-wing-r" cx="28" cy="13" rx="9" ry="5" fill="rgba(210,238,255,0.8)" stroke="#aad" stroke-width="0.8"/>
+        <ellipse cx="18" cy="22" rx="8" ry="10" fill="#FFD93D"/>
+        <rect x="11" y="19" width="14" height="4" rx="2" fill="#333" opacity="0.65"/>
+        <rect x="11" y="25" width="14" height="3" rx="1.5" fill="#333" opacity="0.65"/>
+        <circle cx="18" cy="12" r="6" fill="#FFD93D"/>
+        <circle cx="16" cy="11" r="1.5" fill="#333"/>
+        <circle cx="20" cy="11" r="1.5" fill="#333"/>
+      </svg>
+    </div>
+    <div class="hero-bee hero-bee-2">
+      <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+        <ellipse class="bee-wing" cx="8" cy="13" rx="9" ry="5" fill="rgba(210,238,255,0.8)" stroke="#aad" stroke-width="0.8"/>
+        <ellipse class="bee-wing-r" cx="28" cy="13" rx="9" ry="5" fill="rgba(210,238,255,0.8)" stroke="#aad" stroke-width="0.8"/>
+        <ellipse cx="18" cy="22" rx="8" ry="10" fill="#FFD93D"/>
+        <rect x="11" y="19" width="14" height="4" rx="2" fill="#333" opacity="0.65"/>
+        <rect x="11" y="25" width="14" height="3" rx="1.5" fill="#333" opacity="0.65"/>
+        <circle cx="18" cy="12" r="6" fill="#FFD93D"/>
+        <circle cx="16" cy="11" r="1.5" fill="#333"/>
+        <circle cx="20" cy="11" r="1.5" fill="#333"/>
+      </svg>
+    </div>
+    <div class="hero-bee hero-bee-3">
+      <svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+        <ellipse class="bee-wing" cx="8" cy="13" rx="9" ry="5" fill="rgba(210,238,255,0.8)" stroke="#aad" stroke-width="0.8"/>
+        <ellipse class="bee-wing-r" cx="28" cy="13" rx="9" ry="5" fill="rgba(210,238,255,0.8)" stroke="#aad" stroke-width="0.8"/>
+        <ellipse cx="18" cy="22" rx="8" ry="10" fill="#FFD93D"/>
+        <rect x="11" y="19" width="14" height="4" rx="2" fill="#333" opacity="0.65"/>
+        <rect x="11" y="25" width="14" height="3" rx="1.5" fill="#333" opacity="0.65"/>
+        <circle cx="18" cy="12" r="6" fill="#FFD93D"/>
+        <circle cx="16" cy="11" r="1.5" fill="#333"/>
+        <circle cx="20" cy="11" r="1.5" fill="#333"/>
+      </svg>
+    </div>
+
+    <!-- Hierba SVG -->
+    <svg class="hero-grass-svg" viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Base de pasto -->
+      <path d="M0,44 Q60,20 120,44 Q180,68 240,44 Q300,20 360,44 Q420,68 480,44 Q540,20 600,44 Q660,68 720,44 Q780,20 840,44 Q900,68 960,44 Q1020,20 1080,44 Q1140,68 1200,44 Q1260,20 1320,44 Q1380,68 1440,44 L1440,70 L0,70 Z" fill="#5DC46B"/>
+      <!-- Briznas de pasto individuales -->
+      <g fill="#4EAD5B">
+        <path d="M30,44 Q28,30 32,20 Q34,30 30,44"/>
+        <path d="M38,44 Q40,28 36,16 Q34,28 38,44"/>
+        <path d="M80,38 Q78,22 82,12 Q84,22 80,38"/>
+        <path d="M140,44 Q138,26 142,14 Q144,26 140,44"/>
+        <path d="M200,40 Q198,24 202,10 Q204,24 200,40"/>
+        <path d="M260,44 Q258,28 262,16 Q264,28 260,44"/>
+        <path d="M320,42 Q318,26 322,14 Q324,26 320,42"/>
+        <path d="M380,44 Q378,28 382,16 Q384,28 380,44"/>
+        <path d="M440,40 Q438,24 442,12 Q444,24 440,40"/>
+        <path d="M500,44 Q498,28 502,16 Q504,28 500,44"/>
+        <path d="M560,42 Q558,26 562,14 Q564,26 560,42"/>
+        <path d="M620,44 Q618,28 622,16 Q624,28 620,44"/>
+        <path d="M680,40 Q678,24 682,12 Q684,24 680,40"/>
+        <path d="M740,44 Q738,28 742,16 Q744,28 740,44"/>
+        <path d="M800,42 Q798,26 802,14 Q804,26 800,42"/>
+        <path d="M860,44 Q858,28 862,16 Q864,28 860,44"/>
+        <path d="M920,40 Q918,24 922,12 Q924,24 920,40"/>
+        <path d="M980,44 Q978,28 982,16 Q984,28 980,44"/>
+        <path d="M1040,42 Q1038,26 1042,14 Q1044,26 1040,42"/>
+        <path d="M1100,44 Q1098,28 1102,16 Q1104,28 1100,44"/>
+        <path d="M1160,40 Q1158,24 1162,12 Q1164,24 1160,40"/>
+        <path d="M1220,44 Q1218,28 1222,16 Q1224,28 1220,44"/>
+        <path d="M1280,42 Q1278,26 1282,14 Q1284,26 1280,42"/>
+        <path d="M1340,44 Q1338,28 1342,16 Q1344,28 1340,44"/>
+        <path d="M1400,40 Q1398,24 1402,12 Q1404,24 1400,40"/>
+      </g>
+      <!-- Flores pequeñas -->
+      <g>
+        <circle cx="60" cy="36" r="3" fill="#FF6B9D" opacity="0.8"/>
+        <circle cx="160" cy="32" r="2.5" fill="#FFD93D" opacity="0.9"/>
+        <circle cx="300" cy="36" r="3" fill="#FF6B9D" opacity="0.8"/>
+        <circle cx="450" cy="32" r="2.5" fill="#fff" opacity="0.7"/>
+        <circle cx="600" cy="36" r="3" fill="#FFD93D" opacity="0.9"/>
+        <circle cx="760" cy="30" r="2.5" fill="#FF6B9D" opacity="0.8"/>
+        <circle cx="900" cy="34" r="3" fill="#fff" opacity="0.7"/>
+        <circle cx="1050" cy="30" r="2.5" fill="#FFD93D" opacity="0.9"/>
+        <circle cx="1200" cy="36" r="3" fill="#FF6B9D" opacity="0.8"/>
+        <circle cx="1370" cy="32" r="2.5" fill="#fff" opacity="0.7"/>
+      </g>
+    </svg>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about" data-aos="fade-up">
+    <div class="about-left">
+      <span class="badge badge-primary">Sobre Nosotros</span>
+      <h2>Un espacio hecho con amor<br>para tu pequeño</h2>
+      <p>En The Kiddy House creemos que cada niño aprende a su propio ritmo. Nuestro centro ofrece un ambiente cálido, seguro y estimulante donde los niños de 5 a 10 años pueden hacer sus tareas, reforzar sus conocimientos y participar en actividades educativas divertidas. Contamos con educadores capacitados y materiales adecuados para cada etapa escolar.</p>
+      <ul class="check-list">
+        <li><span class="check-icon">✓</span>Atención personalizada por rangos de edad</li>
+        <li><span class="check-icon">✓</span>Educadores certificados y comprometidos</li>
+        <li><span class="check-icon">✓</span>Ambiente seguro, limpio y estimulante</li>
+        <li><span class="check-icon">✓</span>Materiales educativos incluidos</li>
+        <li><span class="check-icon">✓</span>Horario fijo de lunes a viernes</li>
+      </ul>
+    </div>
+    <div class="about-img">
+      <img src="./images/generated-1781573157811.png" alt="Niños aprendiendo en The Kiddy House" />
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="servicios" class="services" data-aos="fade-up">
+    <div class="section-header">
+      <span class="badge badge-info">Nuestros Servicios</span>
+      <h2>Lo que ofrecemos</h2>
+      <p>Todo lo que tu hijo necesita para aprender y crecer</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="0">
+        <div class="card-head" style="background:#FFF4EC">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="#FF7F2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <div class="card-body">
+          <h3>Sala de Tareas</h3>
+          <p>Un espacio tranquilo y organizado donde los niños realizan sus tareas escolares con orientación de nuestros educadores. Fomentamos la autonomía y el hábito de estudio.</p>
+        </div>
+      </div>
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card-head" style="background:#EBF7FF">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="#4DAADC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        </div>
+        <div class="card-body">
+          <h3>Reforzamiento</h3>
+          <p>Identificamos las áreas donde tu hijo necesita apoyo y trabajamos de forma personalizada para afianzar los temas vistos en clase: matemáticas, lectura, escritura y más.</p>
+        </div>
+      </div>
+      <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card-head" style="background:#EDFBF0">
+          <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="#6BCB77" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+        </div>
+        <div class="card-body">
+          <h3>Actividades Educativas</h3>
+          <p>Complementamos el aprendizaje con actividades lúdicas: lectura guiada, experimentos sencillos, manualidades educativas, juegos de lógica y trabajo en equipo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule -->
+  <section id="horarios" class="schedule" data-aos="fade-up">
+    <!-- Cielo animado: sol en arco + nubes deslizantes -->
+    <div class="schedule-sky">
+      <div class="sky-sun"></div>
+      <div class="sky-rays"></div>
+      <div class="sky-cloud sky-cloud-1"></div>
+      <div class="sky-cloud sky-cloud-2"></div>
+      <div class="sky-cloud sky-cloud-3"></div>
+    </div>
+    <span class="badge badge-white">Horario de Atención</span>
+    <h2 class="sched-title">Nuestro Horario</h2>
+    <p class="sched-sub">Pensado para después del colegio</p>
+    <div class="schedule-box" data-aos="zoom-in">
+      <svg class="sched-icon" viewBox="0 0 24 24" fill="none" stroke="#4DAADC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <p class="sched-days">Lunes a Viernes</p>
+      <p class="sched-time">3:00 PM — 6:00 PM</p>
+      <p class="sched-desc">Recibimos a los niños puntualmente para aprovechar cada momento de aprendizaje.</p>
+    </div>
+    <p class="sched-note">Consulta disponibilidad de cupos. Las inscripciones son por mes.</p>
+  </section>
+
+  <!-- Why Us -->
+  <section id="porque" class="why-us" data-aos="fade-up">
+    <h2>¿Por qué elegirnos?</h2>
+    <p class="why-sub">Razones para confiar en The Kiddy House</p>
+    <div class="why-grid">
+      <div class="why-card" data-aos="flip-left" data-aos-delay="0">
+        <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <h3>Aprendizaje Personalizado</h3>
+        <p>Nos adaptamos al nivel y necesidades de cada niño.</p>
+      </div>
+      <div class="why-card" data-aos="flip-left" data-aos-delay="100">
+        <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <h3>Educadores Capacitados</h3>
+        <p>Nuestro equipo tiene experiencia trabajando con niños en edad escolar.</p>
+      </div>
+      <div class="why-card" data-aos="flip-left" data-aos-delay="200">
+        <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <h3>Ambiente Familiar</h3>
+        <p>Un lugar donde los niños se sienten seguros, cómodos y felices.</p>
+      </div>
+      <div class="why-card" data-aos="flip-left" data-aos-delay="300">
+        <svg class="why-icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        <h3>Resultados Visibles</h3>
+        <p>Los padres notan mejoría en el rendimiento escolar desde el primer mes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="galeria" class="gallery" data-aos="fade-up">
+    <div class="section-header">
+      <span class="badge badge-accent">Galería</span>
+      <h2>Momentos en The Kiddy House</h2>
+      <p>Descubre cómo aprendemos y nos divertimos</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="0">
+        <img src="https://images.unsplash.com/photo-1584929308615-da204fe8d113?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600" alt="Galería 1" loading="lazy"/>
+        <div class="gallery-overlay"><span>Aprendiendo juntos</span></div>
+      </div>
+      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="80">
+        <img src="https://images.unsplash.com/photo-1626300881606-c2a174a2eefe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600" alt="Galería 2" loading="lazy"/>
+        <div class="gallery-overlay"><span>Creatividad en acción</span></div>
+      </div>
+      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="160">
+        <img src="https://images.unsplash.com/photo-1527868669162-47af73b99346?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600" alt="Galería 3" loading="lazy"/>
+        <div class="gallery-overlay"><span>Diversión y estudio</span></div>
+      </div>
+      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="0">
+        <img src="https://images.unsplash.com/photo-1758685733987-54952cd1c8c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600" alt="Galería 4" loading="lazy"/>
+        <div class="gallery-overlay"><span>Explorando el saber</span></div>
+      </div>
+      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="80">
+        <img src="https://images.unsplash.com/photo-1631977807492-75bf1dd900b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600" alt="Galería 5" loading="lazy"/>
+        <div class="gallery-overlay"><span>Trabajo en equipo</span></div>
+      </div>
+      <div class="gallery-item" data-aos="zoom-in" data-aos-delay="160">
+        <img src="https://images.unsplash.com/photo-1755727317562-b0c34c756768?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=600" alt="Galería 6" loading="lazy"/>
+        <div class="gallery-overlay"><span>Momentos especiales</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" data-aos="fade-up">
+    <div class="cta-clouds">
+      <div class="cloud cloud-white" style="left:30px;top:30px;width:180px;height:68px;opacity:0.2;"></div>
+      <div class="cloud cloud-white" style="right:15px;top:15px;width:210px;height:76px;opacity:0.2;"></div>
+      <div class="cloud cloud-white" style="left:580px;top:8px;width:130px;height:48px;opacity:0.2;"></div>
+    </div>
+    <h2>¿Listo para inscribir a tu hijo?</h2>
+    <p>Los cupos son limitados. ¡Asegura el lugar de tu pequeño hoy mismo!</p>
+    <a href="#contacto" class="btn-white-cta">¡Contáctanos Ahora!</a>
+  </section>
+
+  <!-- Contact -->
+  <section id="contacto" class="contact" data-aos="fade-up">
+    <div class="section-header">
+      <span class="badge badge-primary">Contacto</span>
+      <h2>Encuéntranos</h2>
+    </div>
+    <div class="contact-cols">
+      <div class="contact-form" data-aos="fade-right">
+        <h3>Envíanos un mensaje</h3>
+        <form id="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="tu@correo.com" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+54 11 0000-0000" />
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full">Enviar Mensaje</button>
+        </form>
+        <div id="form-success" class="form-success hidden">
+          <span>🐝</span> ¡Mensaje enviado! Nos pondremos en contacto contigo pronto.
+        </div>
+      </div>
+      <div class="contact-info" data-aos="fade-left">
+        <h3>Información de Contacto</h3>
+        <div class="info-row">
+          <div class="info-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4DAADC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <strong>Dirección</strong>
+            <p>Av. The Kiddy House 756, Sto. Dgo.</p>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4DAADC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.49 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.4 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.57a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <strong>Teléfono</strong>
+            <p>+54 11 2345-6789</p>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4DAADC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <strong>Correo</strong>
+            <p>hola@thekiddyhouse.com</p>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4DAADC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <strong>Horario</strong>
+            <p>Lunes a Viernes: 3:00 PM – 6:00 PM</p>
+          </div>
+        </div>
+        <div class="social-row">
+          <a href="#" class="social-btn instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="social-btn facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-btn whatsapp" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <div><span class="logo-info">The </span><span class="logo-white">Kiddy House</span></div>
+        <p>Aprender es una aventura</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="footer-social">
+        <a href="#" class="fs-btn" style="background:#E1306C" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="#" class="fs-btn" style="background:#4267B2" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" class="fs-btn" style="background:#25D366" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 The Kiddy House. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Modal Inscripción -->
+  <div id="modal-overlay" class="modal-overlay hidden" onclick="closeModal(event)">
+    <div class="modal-card" id="modal-card">
+      <div class="modal-header">
+        <div>
+          <h3>¿Cómo Inscribirse?</h3>
+          <p>Proceso simple en 4 pasos</p>
+        </div>
+        <button class="modal-close" onclick="closeModal()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-info-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#E0A800" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <p>Los cupos se asignan por orden de inscripción. ¡No esperes demasiado para reservar el lugar de tu hijo!</p>
+        </div>
+        <div class="steps-list">
+          <div class="step-item">
+            <div class="step-num">1</div>
+            <div>
+              <strong>Contáctanos</strong>
+              <p>Escríbenos por WhatsApp, Instagram o correo para consultar disponibilidad.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">2</div>
+            <div>
+              <strong>Entrevista inicial</strong>
+              <p>Agendamos una reunión breve para conocer las necesidades de tu hijo.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">3</div>
+            <div>
+              <strong>Reserva de cupo</strong>
+              <p>Completás el formulario de inscripción y abonás el primer mes.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">4</div>
+            <div>
+              <strong>¡Bienvenido!</strong>
+              <p>Tu hijo comienza a disfrutar de The Kiddy House en la fecha acordada.</p>
+            </div>
+          </div>
+        </div>
+        <hr/>
+        <div class="modal-req">
+          <strong>Documentos necesarios:</strong>
+          <ul>
+            <li>Fotocopia del DNI del niño/a</li>
+            <li>Constancia de alumno regular actualizada</li>
+            <li>Número de teléfono del padre / tutor</li>
+            <li>Formulario de inscripción completo</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-cancel" onclick="closeModal()">Cerrar</button>
+        <a href="#contacto" class="btn-primary modal-cta" onclick="closeModal()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          ¡Inscribir a mi hijo ahora!
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
