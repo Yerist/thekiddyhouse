@@ -1,6 +1,6 @@
 # The Kiddy House
 
-Landing page para **The Kiddy House**, una guardería infantil con ambiente cálido y divertido. Incluye secciones de presentación, horarios, galería y contacto.
+Landing page para **The Kiddy House**, una sala de tarea para niños de 5 a 10 años donde pueden hacer sus tareas, reforzar sus conocimientos y participar en actividades educativas divertidas. Este Landing incluye secciones de presentación, horarios, galería y contacto.
 
 ## Demo
 
